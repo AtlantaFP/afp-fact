@@ -1,12 +1,12 @@
 (defsystem "afp-fact"
   :version "0.1.0"
-  :author ""
+  :author "atlantafp"
   :license ""
   :depends-on ()
   :components ((:module "src"
                 :components
                 ((:file "main"))))
-  :description ""
+  :description "simple program that computes factorial with roswell deployable script"
   :in-order-to ((test-op (test-op "afp-fact/tests"))))
 
 (defsystem "afp-fact/tests"

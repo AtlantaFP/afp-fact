@@ -1,5 +1,12 @@
 (defpackage afp-fact
-  (:use :cl))
+  (:use :cl)
+  (:export
+   #:fact))
 (in-package :afp-fact)
 
-;; blah blah blah.
+(defun fact (n)
+  "computes the FACTORIAL of N"
+  (do ((count 1 (1+ count))
+       (res 1 (* res count)))
+   ((> count n) res)))
+
