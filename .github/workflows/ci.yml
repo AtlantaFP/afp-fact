@@ -17,9 +17,9 @@ jobs:
           LISP: ${{ matrix.lisp }}
         run: |
           curl -L https://raw.githubusercontent.com/roswell/roswell/master/scripts/install-for-ci.sh | sh
-      - name: Install Rove
-        run: ros install rove
-      - name: Run tests
+      - name: Install ci-utils
+        run: ros install ci-utils
+      - name: Run 5am
         run: |
           PATH="~/.roswell/bin:$PATH"
-          rove afp-fact.asd
+          run-fiveam  -l afp-fact/tests afp-fact/tests/main:factorial-tests

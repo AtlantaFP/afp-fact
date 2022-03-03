@@ -1,7 +1,10 @@
 (defpackage afp-fact/tests/main
   (:use :cl
    :afp-fact
-   :fiveam))
+	:fiveam)
+  (:export
+   #:factorial-tests))
+
 (in-package :afp-fact/tests/main)
 
 ;; NOTE: To run this test file, execute `(asdf:test-system :afp-fact)' in your Lisp.
